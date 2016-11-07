@@ -115,7 +115,7 @@ namespace pocketmine {
 		require_once(\pocketmine\PATH . "src/pocketmine/CompatibleClassLoader.php");
 	}
 
-	$autoloader = new CompatibleClassLoader();
+	$autoloader = new CompatibleClassLoader(require(\pocketmine\PATH . "vendor/autoload.php"));
 	$autoloader->addPath(\pocketmine\PATH . "src");
 	$autoloader->addPath(\pocketmine\PATH . "src" . DIRECTORY_SEPARATOR . "spl");
 	$autoloader->register(true);
